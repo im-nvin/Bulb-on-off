@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: black;
+            gap: 30px;
+        }
+
+        button {
+            border: 1px solid rgb(39, 39, 39);
+            padding: 5px 15px;
+            border-radius: 5px;
+            background-color: gray;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <button id="bulbOn">Turn On the
+                Light</button>
+            <img src=" images/pic_bulboff.gif" id="bulbImg">
+            <button id="bulbOff">Turn Off the
+                Light</button>
+        </div>
+    </div>
+    <script>
+
+        const turnon = document.getElementById('bulbOn')
+        turnon.addEventListener('click', () => {
+            document.getElementById('bulbImg').src = 'images/pic_bulbon.gif';
+            document.querySelector('.main').style.backgroundColor = "#fef6cb"
+        })
+
+
+        const turnoff = document.getElementById('bulbOff')
+        turnoff.addEventListener('click', () => {
+            document.getElementById('bulbImg').src = 'images/pic_bulboff.gif';
+            document.querySelector('.main').style.backgroundColor = "black"
+        })
+    </script>
+</body>
+
+</html>
